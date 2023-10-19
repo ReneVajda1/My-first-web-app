@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&family=Roboto+Slab&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: radial-gradient(circle at 80% -50%, #86bcee, #e6f1d9);
+    background-repeat: no-repeat;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+h1{
+    font-weight: 50;
+    font-family: Poppins, 'Helvetica';
+}
+p{
+    font-family: 'Helvetica', 'Helvetica';
+}
+main{
+    padding: 3rem 0;
+    width: 100%;
+}
+main .primary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    justify-content: flex-end;
+    gap: 5rem;
+    margin: 0 auto;
+    width: 1350px;
+    padding: 0 5em;
+    background: #020202;
+    height: 600px;
+    box-shadow: 0 .25rem 0.5em #080808a0;
+    
+}
+main .primary img{
+    width: calc(100% - 10em);
+    height: 100%;
+    bottom: 0;
+    position: absolute;
+    
+}
+.dec,
+.inc{
+    color: #8b8988f6;
+    position: absolute;
+    top: 50%;
+    font-size: 4rem;
+    transform: translate(0, -50%);
+    z-index: 2;
+}
+.dec{
+    left: 0.5em;
+}
+.inc{
+    right: 0.5em;
+}
+#description{
+    padding: 0.5em 1em 1.5em 1em;
+    color: #ffffff;
+    background: #000000cc;
+    z-index: 2;
+}
+#desc-heading{
+    text-transform: capitalize;
+    margin-bottom: 1ch;
+}
+#desc-text{
+    color: #a7a3a3;
+}
+.gallery{
+    margin: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.gallery-photo{
+    width: 120px;
+    height: 120px;
+    position: relative;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 .25rem 0.5em #000000a0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 100ms ease-in;
+}
+.gallery-photo.selected{
+    transition: all 100ms ease-in;
+    box-shadow: .09rem .8rem 0.9em #030303f6;
+    transform: scale(1.05);
+}
+.gallery-photo::before{
+    background-size: cover;
+    content: '';
+    position: absolute;
+    inset: 0.25em;
+    background-position: center;
+}
+.gallery-photo::after{
+    text-transform: capitalize;
+    position: absolute;
+    top: -2.5em;
+    transform:  scale(0);
+    content: attr(data-title);
+    white-space: nowrap;
+    background: #1f1f1f;
+    color: #fafafa;
+    text-align: center;
+    padding: 0.25em 0.5em;
+    z-index: 2;
+    transition: transform 500ms 200ms cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: center;
+}
+.gallery-photo:hover::after{
+    transform: scale(1);
+}
+.campfire::before{
+    background-image: url('../images/campfire.jpg');
+}
+.balance:before{
+    background-image: url('../images/balance.jpg');
+}
+.sun::before{
+    background-image: url('../images/sun.jpg');
+}
+.rockyroad::before{
+    background-image: url('../images/rockyroad.jpg');
+}
+.sunset::before{
+    background-image: url('../images/sunset.jpg');
+}
+.bluesnail::before{
+    background-image: url('../images/bluesnail.jpg');
+}
+.goat::before{
+    background-image: url('../images/goat.jpg');
+}
+.mountain::before{
+    background-image: url('../images/mountain.jpg');
+}
